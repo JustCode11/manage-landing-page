@@ -1,0 +1,20 @@
+@use '../utils/' as u;
+
+$marginMobileWideX: 29;
+$marginMobileSlimX: 15;
+$marginDesktopWideX: 164;
+
+.containerWide {
+    margin-left: u.rem($marginMobileWideX);
+    margin-right: u.rem($marginMobileWideX);
+
+    @include u.breakpoint-up(large) {
+        margin-left: u.rem($marginDesktopWideX);
+        margin-right: u.rem($marginDesktopWideX);
+    }
+}
+
+.containerSlim {
+    margin-left: u.rem($marginMobileSlimX);
+    margin-right: u.rem($marginMobileSlimX);
+}

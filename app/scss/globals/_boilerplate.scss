@@ -1,0 +1,118 @@
+@use '../utils' as u;
+@use './colors' as v;
+@use './fonts' as font;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: font.$primaryFont;
+    font-size: u.rem(13);
+    color: v.$darkGrayishBlue;
+    text-align: center;
+
+    @include u.breakpoint-up(large) {
+        font-size: u.rem(16);
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: v.$darkBlue;
+}
+
+h1 {
+    font-size: u.rem(35);
+
+    @include u.breakpoint-up(large) {
+        font-size: u.rem(52);
+    }
+}
+
+h2 {
+    font-size: u.rem(30);
+
+    @include u.breakpoint-up(large) {
+        font-size: u.rem(36);
+    }
+}
+
+h3 {
+    font-size: u.rem(16);
+    letter-spacing: u.rem(-1);
+}
+
+p {
+    margin: 0;
+    line-height: u.rem(26);
+}
+
+.noScrollY {
+    overflow-y: hidden;
+}
+
+button {
+    display: inline-block;
+    font-size: u.rem(13);
+    font-family: font.$primaryFont;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: v.$brightRed;
+    color: v.$white;
+    font-weight: 500;
+    border-radius: u.rem(25);
+    white-space: nowrap;
+    padding: u.rem(15) u.rem(32);
+    -webkit-box-shadow: 0px 7px 10px -2px rgba(242, 95, 58, 0.5);
+    box-shadow: 0px 7px 10px -2px rgba(242, 95, 58, 0.5);
+
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: rgb(242, 95, 58, 0.7);
+    }
+}
+
+input[type="text"] {
+    font-family: font.$primaryFont;
+    padding: u.rem(15) u.rem(24);
+    border-radius: u.rem(25);
+    outline: none;
+    border: none;
+}
+
+// Visibility
+.hide-for-mobile {
+    @include u.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include u.breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.setBehind {
+    z-index: -1;
+}

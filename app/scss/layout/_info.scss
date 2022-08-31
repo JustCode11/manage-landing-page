@@ -1,0 +1,94 @@
+@use '../utils' as u;
+@use '../globals/' as v;
+
+.info {
+    background-color: v.$brightRed;
+    padding-top: u.rem(105);
+    padding-bottom: u.rem(95);
+
+    @include u.breakpoint-up(large) {
+        padding-top: u.rem(67);
+        padding-bottom: u.rem(61);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: u.rem(20);
+        margin-right: u.rem(20);
+
+        @include u.breakpoint-up(large) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: u.rem(164);
+            margin-right: u.rem(164);
+        }
+
+        &__text {
+            position: relative;
+            font-size: u.rem(38);
+            font-weight: 600;
+            color: v.$white;
+
+            @include u.breakpoint-down(medium) {
+                margin-bottom: u.rem(25);
+            }
+
+            @include u.breakpoint-up(large) {
+                text-align: left;
+                width: u.rem(450);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -39%;
+                left: -69%;
+                width: u.rem(280);
+                height: u.rem(270);
+                background-color: rgba(255, 239, 235, 0.07);
+                transform: rotate(-132deg);
+                border-end-end-radius: u.rem(140);
+                border-end-start-radius: u.rem(140);
+
+                @include u.breakpoint-up(large) {
+                    top: -139%;
+                    left: 45%;
+                    height: u.rem(490);
+                    width: u.rem(296);
+                    transform: rotate(-137deg);
+                }
+            }
+        }
+
+        &__button {
+            position: relative;
+
+            .info-button {
+                background-color: v.$white;
+                color: v.$brightRed;
+
+                &:hover {
+                    background-color: rgb(255, 255, 255, 0.7);
+                }
+            }
+
+            &::before {
+                @include u.breakpoint-up(large) {
+                    content: "";
+                    position: absolute;
+                    top: -469%;
+                    left: 56%;
+                    width: u.rem(280);
+                    height: u.rem(270);
+                    background-color: rgba(255, 239, 235, 0.07);
+                    transform: rotate(64deg);
+                    border-end-end-radius: u.rem(140);
+                    border-end-start-radius: u.rem(140);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@use '../utils' as u;
+@use '../globals/' as v;
+
+.header {
+    position: relative;
+    padding-top: u.rem(43);
+    padding-bottom: u.rem(43);
+
+    @include u.breakpoint-up(large) {
+        padding-top: u.rem(55);
+        padding-bottom: u.rem(55);
+        margin-bottom: u.rem(55);
+    }
+
+    // Mobile Menu Open Styles
+    &.open {
+
+        .header__mobile-menu {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        opacity: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(transparent, black);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        img {
+            width: u.rem(110);
+            height: u.rem(18);
+            object-fit: contain;
+
+            @include u.breakpoint-up(large) {
+                width: u.rem(146);
+                height: u.rem(24);
+            }
+        }
+    }
+
+    &__mobile-menu {
+        width: u.rem(25);
+
+        >span {
+            display: block;
+            height: u.rem(4);
+            background-color: v.$veryDarkBlue;
+            transition: all 300ms ease-in-out;
+            transform-origin: u.rem(2) u.rem(2);
+
+            &:not(:last-child) {
+                margin-bottom: u.rem(3);
+            }
+        }
+    }
+
+    &__links-container {
+        &__links {
+            display: flex;
+            align-items: center;
+
+            a {
+                font-size: u.rem(13);
+                color: v.$darkBlue;
+                font-weight: 500;
+                transition: color 200ms ease-in-out;
+
+                &:hover {
+                    color: v.$darkGrayishBlue;
+                }
+
+                &:not(:last-child) {
+                    margin-right: u.rem(33);
+                }
+            }
+        }
+    }
+
+    &__mobile-menu-links {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: v.$white;
+        display: flex;
+        flex-direction: column;
+        margin-top: u.rem(40);
+        text-align: center;
+        border-radius: u.rem(5);
+        padding-top: u.rem(15);
+        padding-bottom: u.rem(15);
+
+        a {
+            color: v.$darkBlue;
+            font-weight: 500;
+            padding-top: u.rem(15);
+            padding-bottom: u.rem(15);
+        }
+    }
+}

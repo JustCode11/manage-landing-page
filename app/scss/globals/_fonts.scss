@@ -1,0 +1,21 @@
+//@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../../../assets/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../../../assets/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../../../assets/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf');
+    font-weight: bold;
+}
+
+$primaryFont: 'Be Vietnam Pro', sans-serif;
