@@ -28,16 +28,16 @@ Users should be able to:
 
 Desktop Preview
 
-![Manage Landing Page on Desktop](.preview/ManageLandingPageDesktop.gif)
+![Manage Landing Page on Desktop](./preview/ManageLandingPageDesktop.gif)
 
 Mobile Preview
 
-![Manage Landing Page on Mobile](.preview/ManageLandingPageMobile.gif)
+![Manage Landing Page on Mobile](./preview/ManageLandingPageMobile.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5/hub/solution-created-with-sass-and-has-a-working-slideshow-on-mobile-AHuVvD1FUq](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5/hub/solution-created-with-sass-and-has-a-working-slideshow-on-mobile-AHuVvD1FUq)
+- Live Site URL: [https://justcode11.github.io/manage-landing-page/](https://justcode11.github.io/manage-landing-page/)
 
 ### Built with
 
